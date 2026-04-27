@@ -3,7 +3,7 @@ services:
     name: hassaan-job-api
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    startCommand: gunicorn app:app --timeout 120 --workers 1
     envVars:
       - key: RAPIDAPI_KEY
         sync: false
